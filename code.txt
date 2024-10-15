@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Contact Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%23e0e0e0"/></svg>');
+            background-size: 100px 100px;
+        }
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+        input, textarea {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #success-message {
+            display: none;
+            background-color: #dff0d8;
+            color: #3c763d;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🌟 Contact Portal 🌟</h2>
+        <form id="contact-form" onsubmit="event.preventDefault(); document.getElementById('success-message').style.display = 'block';">
+            <label for="name">👤 Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="e.g. DEVANSHU TRIPATHI" required>
+
+            <label for="email">📡 Email:</label>
+            <input type="email" id="email" name="email" placeholder="e.g. devanshutripathi483@gmail.com" required>
+
+
+            <label for="message">💫 Your Message:</label>
+            <textarea id="message" name="message" placeholder="Share your thoughts..." required></textarea>
+
+            <button type="submit">🚀 Submit Message</button>
+        </form>
+        <div id="success-message">
+            <p>🎉 Hooray! Your message has been successfully launched into the portal. We'll respond faster than light speed! 🌠</p>
+        </div>
+    </div>
+</body>
+</html>
